@@ -10,6 +10,10 @@ parseObject: post objectid we are working with
 participantId: userid of the interaction
 interactionType: Boolean for tried or trashed
 */
+
+Parse.Cloud.define('hello', function(req, res) {
+  res.success('Hi from the cloud');
+});
  
 Parse.Cloud.define("saveInteraction", function(request, response) {
    
