@@ -11,7 +11,7 @@ participantId: userid of the interaction
 interactionType: Boolean for tried or trashed
 */
 
-Parse.Cloud.define('hello', function(req, res) {
+Parse.Cloud.define('marshmellow', function(req, res) {
   res.success('Hi from the cloud');
 });
  
