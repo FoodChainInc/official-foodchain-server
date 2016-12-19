@@ -26,11 +26,19 @@ var api = new ParseServer({
       senderId: '951041088211', // The Sender ID of GCM
       apiKey: 'AIzaSyBPTPtoGoC8znp6cqzJJChewdqlmyLWvTY' // The Server API Key of GCM
     },
-    ios: {
-      pfx: 'development.p12', // The filename of private key and certificate in PFX or PKCS12 format from disk  
+    ios: [
+      {
+      pfx: 'FoodChainDevelopmentCertificate.p12', // The filename of private key and certificate in PFX or PKCS12 format from disk  
       bundleId: 'FoodChain', // The bundle identifier associate with your app
       production: false // Specifies which environment to connect to: Production (if true) or Sandbox
-    }
+    },
+       {
+      pfx: 'FoodChainProductionCertificate.p12', // The filename of private key and certificate in PFX or PKCS12 format from disk  
+      bundleId: 'FoodChain', // The bundle identifier associate with your app
+      production: true // Specifies which environment to connect to: Production (if true) or Sandbox
+       }
+      ]
+      
   }
   
 });
